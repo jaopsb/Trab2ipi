@@ -3,12 +3,12 @@
 using namespace std;
 using namespace cv;
 
-int rEstruturante = 3;
-int cEstruturante = 3;
+int rEstruturante = 10;
+int cEstruturante = 10;
 
 //gera elemento estruturante
 Mat elementoEstruturante(){
-	return getStructuringElement( MORPH_RECT,
+	return getStructuringElement( MORPH_ELLIPSE,//para questao 1 use MORPH_RECT, para a 2 MORTH_ELLIPSE
 								  Size( 2*rEstruturante + 1, 2*cEstruturante+1 ),
 								  Point( rEstruturante, cEstruturante )); // elemento estruturante  retangulo 3x3
 
